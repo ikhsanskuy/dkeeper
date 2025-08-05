@@ -16,5 +16,10 @@ actor Dkeeper {
 
     notes := List.push(newNote, notes);
     Debug.print(debug_show(notes));
-  }
+  };
+
+  //return Array
+  public query func readNotes(): async [Note]{
+    return List.toArray(notes);
+  };
 }
